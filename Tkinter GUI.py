@@ -1,5 +1,4 @@
-from cgitb import text
-from re import I, M
+
 from tkinter import *
 import os
 import datetime as dt
