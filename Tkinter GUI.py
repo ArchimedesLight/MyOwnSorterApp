@@ -3,8 +3,12 @@ from tkinter import *
 import os
 import datetime as dt
 
+
 root = Tk()
+root.geometry("350x200")
+
 tkinter = Tk
+
 
 def Spotify():
     os.chdir(r"C:\Users\stuart\AppData\Roaming\Spotify")
@@ -31,44 +35,45 @@ def GOG():
     os.startfile(r"C:\Program Files (x86)\GalaxyClient\GalaxyClient.exe")
     os.system(r"C:\Program Files (x86)\GalaxyClient/GalaxyClient.exe")
 
-def WarThunder():
-    os.chdir(r"F:\Steam Library\steamapps\common\War Thunder\win64")
-    os.startfile(r"F:\Steam Library\steamapps\common\War Thunder\win64\aces.exe")
-    os.system(r"F:\Steam Library\steamapps\common\War Thunder/win64/aces.exe")
-    
-spotLabel = Label(root, text="Press Here For Spotify", fg="green", bg="black")
+def EGS():
+    os.chdir(r"C:\Program Files (x86)\Epic Games\Launcher\Portal\Binaries\Win32")
+    os.startfile(r"C:\Program Files (x86)\Epic Games\Launcher\Portal\Binaries\Win32\EpicGamesLauncher.exe")
+    os.system(r"C:\Program Files (x86)\Epic Games\Launcher\Portal\Binaries\Win32/EpicGamesLauncher.exe")
+
+
+spotLabel = Label(root, text="Press Here For Spotify", fg="green")
 spotLabel.grid(row = 0, column = 1)
-spotify = Button(root, text="Spotify",command = Spotify, fg="green", bg="black")
+spotify = Button(root, text="Spotify",command = Spotify, fg="green", bg="black", width=25, height=1)
 spotify.grid(row = 0, column = 0)
 
-steam = Button(root, text="Steam",command = Steam, fg="blue", bg="black")
-steam.grid(row = 1, column = 0)
-steamLabel = Label(root, text="Press Here For Steam", fg="blue", bg="black")
+steamLabel = Label(root, text="Press Here For Steam", fg="blue")
 steamLabel.grid(row = 1, column = 1)
+steam = Button(root, text="Steam",command = Steam, fg="blue", bg="black", width=25, height=1)
+steam.grid(row = 1, column = 0)
 
-firefoxLabel = Label(root, text="Press Here For Firefox", fg="orange", bg="black")
+firefoxLabel = Label(root, text="Press Here For Firefox", fg="orange")
 firefoxLabel.grid(row = 2, column = 1)
-firefox = Button(root, text="Firefox",command = Firefox, fg="orange", bg="black")
+firefox = Button(root, text="Firefox",command = Firefox, fg="orange", bg="black", width=25, height=1)
 firefox.grid(row = 2, column = 0)
 
-discordLabel = Label(root, text="Press Here For Discord", fg="purple", bg="black")
+discordLabel = Label(root, text="Press Here For Discord", fg="purple")
 discordLabel.grid(row = 3, column = 1)
-discord = Button(root, text="Discord", command = Discord, fg="purple", bg="black")
+discord = Button(root, text="Discord", command = Discord, fg="purple", bg="black", width=25, height=1)
 discord.grid(row = 3, column = 0)
 
-GOGLabel = Label(root, text="Press Here For GOG", fg="pink", bg="black")
+GOGLabel = Label(root, text="Press Here For GOG", fg="pink")
 GOGLabel.grid(row = 4, column = 1)
-discord = Button(root, text="Discord", command = Discord, fg="pink", bg="black")
-discord.grid(row = 4, column = 0)
+gog = Button(root, text="GOG", command = GOG, fg="pink", bg="black", width=25, height=1)
+gog.grid(row = 4, column = 0)
 
-WTLabel = Label(root, text="Press Here For War Thunder", fg="red", bg="black")
-WTLabel.grid(row = 5, column = 1)
-wt = Button(root, text="War Thunder", command = Discord, fg="red", bg="black")
-wt.grid(row = 5, column = 0)
+EGSLabel = Label(root, text="Press Here For EGS", fg="white", bg="black")
+EGSLabel.grid(row = 5, column = 1)
+egs = Button(root, text="EGS", command = EGS, fg="white", bg="black", width=25, height=1)
+egs.grid(row = 5, column = 0)
 
 date = dt.datetime.now()
 TiMe = Label(root, text=f"{date:%I:%M, %A, %B %d, %Y}")
-TiMe.grid(row = 6, column = 0)
+TiMe.grid(row = 7, column = 0)
  
 root.mainloop()
 
